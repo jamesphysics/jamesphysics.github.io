@@ -1,0 +1,724 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Qiskit Exam Preparation Model Questions</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(145, 145, 142, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(187, 132, 108, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(215, 129, 58, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 148, 51, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(108, 155, 125, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(91, 151, 189, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(167, 130, 195, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(205, 116, 159, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(225, 111, 100, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(145, 145, 142, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(187, 132, 108, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(215, 129, 58, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 148, 51, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(108, 155, 125, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(91, 151, 189, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(167, 130, 195, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(205, 116, 159, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(225, 111, 100, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="eb6a077c-27c2-4f18-a052-fca90a40ad83" class="page sans"><header><div class="page-header-icon undefined"><span class="icon">🏹</span></div><h1 class="page-title">Qiskit Exam Preparation Model Questions</h1></header><div class="page-body"><h1 id="22b83d46-b771-45cc-9ddc-3ec5dbc4d429" class="">Introduction</h1><h2 id="12f8f391-f012-4ae3-ba86-6d429cfd9a35" class="">What will you find in this study guide?</h2><p id="debc16d9-c92a-4450-ba27-0012c62e2cc3" class="">The Qiskit developer certification has plenty of fantastic online study material (I highly recommend <a href="http://www.primaryobjects.com/2021/09/15/the-ultimate-guide-to-a-quantum-computing-certification-with-qiskit/">this study guide</a> by Kory Becker).</p><p id="4dd1064d-c55a-42e0-8c88-5c0c37be9615" class="">To aid with <a href="https://aliabdaal.com/activerecallstudytechnique/">active recall</a> I took the syllabus to create exam questions on each topic drawing inspiration from the <a href="https://www.ibm.com/certify/api/getpdf/sampletests/samc1000_112">practice paper</a> and <a href="https://www.ibm.com/certify/api/getpdf/studyguides/stuc1000_112">study guide</a></p><h2 id="b5a1ebd6-564a-42b3-8d35-86a96f8aedd7" class="">Prerequisites</h2><p id="d9f3d1b1-75ed-4e2b-b526-89fc1c3bbc75" class="">The <a href="https://www.ibm.com/certify/exam?id=C1000-112">exam website</a> defines these key areas of competency:</p><ul id="20a6b867-730e-4c24-8d5a-602399256d57" class="bulleted-list"><li style="list-style-type:disc">Defining, executing, and visualizing results of quantum circuits using the Qiskit SDK</li></ul><ul id="24554784-a3e4-4f06-8a9f-bfa42daf4b34" class="bulleted-list"><li style="list-style-type:disc">Understanding single-qubit gates and their rotations on the Bloch sphere.</li></ul><ul id="a7ddcd9e-301a-44f2-b3f5-f58de9f7569b" class="bulleted-list"><li style="list-style-type:disc">Understanding various multi-qubit gates and their effects in quantum circuits.</li></ul><ul id="2d1bb664-2db3-4d78-9260-8b3f8bf8d97c" class="bulleted-list"><li style="list-style-type:disc">Leveraging fundamental Qiskit SDK features including commonly-used classes and functions located in qiskit.circuit, qiskit.execute, qiskit.providers, qiskit.qasm, qiskit.quantum_info, qiskit.tools, and qiskit.visualization packages.</li></ul><p id="7cd54612-47d5-4e9e-a5c6-8da5a6d5067d" class="">
+</p><p id="769eaff8-fb6b-48b4-8db1-5b938b3fa5e6" class="">Ideally, you will have the following skills before taking the exam (<a href="https://www.ibm.com/certify/cert?id=C0010300">source</a>):<div class="indented"><ul id="85f215ee-f377-47a7-ab26-8235480aa949" class="bulleted-list"><li style="list-style-type:disc">Working knowledge of creating, executing, and visualizing the results quantum of circuits using the online <a href="https://quantum-computing.ibm.com/composer">IBM Quantum Composer</a>.</li></ul><ul id="13156f69-5478-4ff3-8769-d2fdec1eec98" class="bulleted-list"><li style="list-style-type:disc">Working knowledge of developing examples that highlight features of the Qiskit SDK, such as those found in the online <a href="https://quantum-computing.ibm.com/lab">IBM Quantum Lab</a>.</li></ul><ul id="97448485-8e68-435a-82b4-815762ef9e75" class="bulleted-list"><li style="list-style-type:disc">Working knowledge of modelling quantum states and evolution with complex vectors and
+matrices.</li></ul><ul id="af851d6f-20e1-400b-80a5-a31a40a4da46" class="bulleted-list"><li style="list-style-type:disc">Working knowledge of Pauli matrices.</li></ul><ul id="ede6019b-7258-4f49-bc81-c2658199e750" class="bulleted-list"><li style="list-style-type:disc">Working knowledge of quantum state measurement probabilities.</li></ul><ul id="56b0d24b-4f5c-419b-af62-e56b6af2e599" class="bulleted-list"><li style="list-style-type:disc">Familiarity with common circuits such as those that result in the Bell states.</li></ul></div></p><p id="75f6bdf7-0843-440a-ae38-7c3a82ccc63b" class="">If you haven&#x27;t already, study the <a href="https://qiskit.org/textbook">Learn Quantum Computation using Qiskit textbook</a> (up to, and including, the Multiple Qubits and Entanglement section) and then try answering the following questions:<div class="indented"><figure id="70e0f285-d1a8-4b15-a1f6-f896f0ce33ca" class="image"><a href="Qiskit%20Exam%20Preparation%20Model%20Questions%2070e0f285d1a84b15a1f6f896f0ce33ca/Untitled.png"><img style="width:295px" src="Qiskit%20Exam%20Preparation%20Model%20Questions%2070e0f285d1a84b15a1f6f896f0ce33ca/Untitled.png"/></a></figure><ul id="a0627641-306b-415f-8d71-2bd21b23e5e6" class="toggle"><li><details open=""><summary>State the 4D-vector used to store the amplitudes of the state above</summary><p id="87bbaa22-bc15-4a3d-adf0-23c883ab3a4b" class=""><style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.13.2/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo fence="true">[</mo><mtable rowspacing="0.1600em" columnalign="center" columnspacing="1em"><mtr><mtd><mstyle scriptlevel="0" displaystyle="false"><msub><mi>a</mi><mn>00</mn></msub></mstyle></mtd></mtr><mtr><mtd><mstyle scriptlevel="0" displaystyle="false"><msub><mi>a</mi><mn>01</mn></msub></mstyle></mtd></mtr><mtr><mtd><mstyle scriptlevel="0" displaystyle="false"><msub><mi>a</mi><mn>10</mn></msub></mstyle></mtd></mtr><mtr><mtd><mstyle scriptlevel="0" displaystyle="false"><msub><mi>a</mi><mn>11</mn></msub></mstyle></mtd></mtr></mtable><mo fence="true">]</mo></mrow><annotation encoding="application/x-tex">\begin{bmatrix} a_{00} \\ a_{01} \\ a_{10} \\ a_{11} \end{bmatrix}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:4.80006em;vertical-align:-2.15003em;"></span><span class="minner"><span class="mopen"><span class="delimsizing mult"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:2.65003em;"><span style="top:-1.7110100000000004em;"><span class="pstrut" style="height:3.2160200000000003em;"></span><span class="delimsizinginner delim-size4"><span>⎣</span></span></span><span style="top:-2.85801em;"><span class="pstrut" style="height:3.2160200000000003em;"></span><span style="height:1.2160200000000003em;width:0.667em;"><svg width='0.667em' height='1.2160200000000003em' style='width:0.667em' viewBox='0 0 667 1216' preserveAspectRatio='xMinYMin'><path d='M319 0 H403 V1216 H319z M319 0 H403 V1216 H319z'/></svg></span></span><span style="top:-4.71105em;"><span class="pstrut" style="height:3.2160200000000003em;"></span><span class="delimsizinginner delim-size4"><span>⎡</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:2.15003em;"><span></span></span></span></span></span></span><span class="mord"><span class="mtable"><span class="col-align-c"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:2.6500000000000004em;"><span style="top:-4.8100000000000005em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord mathnormal">a</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">00</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span><span style="top:-3.61em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord mathnormal">a</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">01</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span><span style="top:-2.4099999999999997em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord mathnormal">a</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">10</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span><span style="top:-1.2099999999999997em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord mathnormal">a</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">11</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:2.1500000000000004em;"><span></span></span></span></span></span></span></span><span class="mclose"><span class="delimsizing mult"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:2.65003em;"><span style="top:-1.7110100000000004em;"><span class="pstrut" style="height:3.2160200000000003em;"></span><span class="delimsizinginner delim-size4"><span>⎦</span></span></span><span style="top:-2.85801em;"><span class="pstrut" style="height:3.2160200000000003em;"></span><span style="height:1.2160200000000003em;width:0.667em;"><svg width='0.667em' height='1.2160200000000003em' style='width:0.667em' viewBox='0 0 667 1216' preserveAspectRatio='xMinYMin'><path d='M263 0 H347 V1216 H263z M263 0 H347 V1216 H263z'/></svg></span></span><span style="top:-4.71105em;"><span class="pstrut" style="height:3.2160200000000003em;"></span><span class="delimsizinginner delim-size4"><span>⎤</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:2.15003em;"><span></span></span></span></span></span></span></span></span></span></span></span><span>﻿</span></span></p></details></li></ul><ul id="a338de4f-3289-4104-86a3-064296e11792" class="toggle"><li><details open=""><summary>If we tensor product b with a similar state, a, what is the result?</summary><figure id="89c65ab1-3300-4c71-ba5f-2cde8e2bb32c" class="image"><a href="Qiskit%20Exam%20Preparation%20Model%20Questions%2070e0f285d1a84b15a1f6f896f0ce33ca/Untitled%201.png"><img style="width:371px" src="Qiskit%20Exam%20Preparation%20Model%20Questions%2070e0f285d1a84b15a1f6f896f0ce33ca/Untitled%201.png"/></a></figure></details></li></ul><ul id="781ef968-0ef1-428e-abba-429755cd3030" class="toggle"><li><details open=""><summary>What is phase kickback?</summary><p id="38606733-97e9-4d18-8bba-5b0f2da18af2" class="">If a controlled-unitary gate acts on a target qubit in an eigenstate of that unitary, then the eigenvalue of that state will be applied back as a phase on the control bit. </p></details></li></ul><ul id="2929639a-4df8-45ba-a843-b2aa492551e8" class="toggle"><li><details open=""><summary>Give an identity related to phase kickback</summary><figure id="e7ac00b0-7b7d-4dad-a1ff-4fb4b70a72b6" class="image"><a href="Qiskit%20Exam%20Preparation%20Model%20Questions%2070e0f285d1a84b15a1f6f896f0ce33ca/Untitled%202.png"><img style="width:346px" src="Qiskit%20Exam%20Preparation%20Model%20Questions%2070e0f285d1a84b15a1f6f896f0ce33ca/Untitled%202.png"/></a></figure></details></li></ul><ul id="c7cc8f47-9f08-44c6-9477-320d7da659f6" class="toggle"><li><details open=""><summary>How can a Hadamard gate be used to transform Z and X gates?</summary><figure id="4045230b-4c16-49ea-899a-820e50551a5a" class="image"><a href="Qiskit%20Exam%20Preparation%20Model%20Questions%2070e0f285d1a84b15a1f6f896f0ce33ca/Untitled%203.png"><img style="width:208px" src="Qiskit%20Exam%20Preparation%20Model%20Questions%2070e0f285d1a84b15a1f6f896f0ce33ca/Untitled%203.png"/></a></figure></details></li></ul><ul id="77fe0226-3086-46cf-97ce-973fcaccd418" class="toggle"><li><details open=""><summary>How can a unitary be used to transform the X gate to the Y gate?</summary><figure id="60804c85-cec9-4f52-b81d-84d779dc1cb7" class="image"><a href="Qiskit%20Exam%20Preparation%20Model%20Questions%2070e0f285d1a84b15a1f6f896f0ce33ca/Untitled%204.png"><img style="width:254px" src="Qiskit%20Exam%20Preparation%20Model%20Questions%2070e0f285d1a84b15a1f6f896f0ce33ca/Untitled%204.png"/></a></figure></details></li></ul><ul id="cf81b347-b37c-403f-8946-39b26714f530" class="toggle"><li><details open=""><summary>Construct a bell state using qiskit operations</summary><pre id="7e6b41bf-149d-4c23-b02c-0d06ab7ac250" class="code"><code>from qiskit import QuantumCircuit
+
+qc = QuantumCircuit(2)
+
+qc.h(0)
+qc.cx(0, 1)</code></pre><p id="cd119d95-8bc2-4088-8d9c-9bf9f7af0ca6" class="">
+</p></details></li></ul><p id="f1c16092-f3b1-460b-9dad-f8ba23ce79ba" class="">
+</p></div></p><p id="201b890c-b19f-4123-a89f-a6021d212c86" class="">It is be helpful to go through some of the tutorials that cover the following areas of the IBM Quantum Lab:<div class="indented"><p id="b0f4bdc1-2763-42fa-8295-39696057ca31" class=""><a href="https://quantum-computing.ibm.com/lab/files/qiskit-tutorials/tutorials/circuits">1. Quantum circuits</a></p><p id="022850de-58ac-47b5-a715-8e823c207a0f" class=""><a href="https://quantum-computing.ibm.com/lab/files/qiskit-tutorials/tutorials/simulators">2. Quantum simulators</a></p></div></p><h2 id="23b1b369-a3b5-458e-929b-c3de9cfa317a" class="">Spaced repetition</h2><p id="0bd54615-128b-467e-9a30-8e01190721e6" class="">There is an upcoming Anki deck to accompany this material.</p><h1 id="924d4198-49c2-44c7-8e68-f9a9a13fd9a9" class="">Syllabus:</h1><h2 id="94628935-c02e-437e-8c7d-fc63ba21429c" class="">1. Perform Operations on Quantum Circuits - 47%</h2><ol type="1" id="a1f5e1ec-41a4-444d-a206-ebf6d7b3df7a" class="numbered-list" start="1"><li>Construct multi-qubit quantum registers</li></ol><ol type="1" id="4687b498-009c-4dce-bb42-0b6472fcce6d" class="numbered-list" start="2"><li>Measure quantum circuits in classical registers</li></ol><ol type="1" id="681f6a2c-3191-4b2e-8596-75ec18749d36" class="numbered-list" start="3"><li>Use single-qubit gates</li></ol><ol type="1" id="65aa5e3a-37f7-4ae4-874e-667a3af6afd7" class="numbered-list" start="4"><li>Use multi-qubit gates</li></ol><ol type="1" id="5eec23b3-c3aa-4e24-b6ba-d5160497b045" class="numbered-list" start="5"><li>Use barrier operations</li></ol><ol type="1" id="74c62063-58a4-4423-832d-3f7e2643b85d" class="numbered-list" start="6"><li>Return the circuit depth</li></ol><ol type="1" id="7a9b188e-4ca4-42e3-bedb-ef1e9039bf20" class="numbered-list" start="7"><li>Extend quantum circuits</li></ol><ol type="1" id="c6578735-19f5-42c4-bf6c-50646b756e8b" class="numbered-list" start="8"><li>Return the OpenQASM string for a circuit</li></ol><p id="e517629a-e7f8-427d-b8d7-262d906bb9cd" class="">
+</p><ul id="e932ba34-6aa1-4525-8ce2-85343ae7f786" class="toggle"><li><details open=""><summary>Construct a Quantum Circuit with a quantum register of three qubits</summary><pre id="29880940-1f0c-40ca-a9a0-214897c7844b" class="code"><code>circ = QuantumCircuit(3)</code></pre></details></li></ul><ul id="eb6f9a79-1280-4e39-aa8b-7d8ac26e192e" class="toggle"><li><details open=""><summary>What common methods does a Gate object have acces to?*</summary><ul id="8040094b-6c91-401c-bd91-939b6ec93222" class="bulleted-list"><li style="list-style-type:disc">assemble()</li></ul><ul id="3934099b-dd4e-4fea-b200-3c280dc0d785" class="bulleted-list"><li style="list-style-type:disc">inverse()</li></ul><ul id="1abec620-c819-4173-9715-7f770e4cd663" class="bulleted-list"><li style="list-style-type:disc">control()</li></ul><ul id="00d37660-a3f9-4d83-823c-c22622d38997" class="bulleted-list"><li style="list-style-type:disc">power(n)</li></ul><ul id="89185f22-17c6-4cf7-970b-5c68a6d7c6be" class="bulleted-list"><li style="list-style-type:disc">to_matrix()</li></ul></details></li></ul><ul id="8f3f2229-57c5-48b0-89f9-de6fd583445a" class="toggle"><li><details open=""><summary>Measure a qubit j </summary><pre id="6f8f10d9-a8fa-41bc-a3c9-25a04180f579" class="code"><code>qc.measure(j,j)</code></pre></details></li></ul><ul id="11b7650b-8cd4-4dd8-8b73-1388eee7809b" class="toggle"><li><details open=""><summary>Write code to measure every qubit in the circuit QuantumCircuit(n,n)</summary><pre id="b6f2531c-c4c2-433f-95af-06f6dc95ee4f" class="code"><code>for j in range(n):
+    qc_output.measure(j,j)</code></pre></details></li></ul><ul id="e7a59fef-eb16-4c2d-a98c-ac2ae936f0b4" class="toggle"><li><details open=""><summary>How do you measure multiple qubits?*</summary><pre id="18776ef6-2a2d-42d8-a97b-f3d93fca01f0" class="code"><code>qc.measure([0,1], [0,1])</code></pre></details></li></ul><ul id="6e04db19-7d95-4a15-934e-6ff1c5081021" class="toggle"><li><details open=""><summary>What does the measure_all function do?*</summary><p id="074522fd-d080-42cb-bece-9bba56720ed4" class="">It allows you to measure all qubits at once. The function automatically introduces a barrier between the measurement operations and the circuit.</p></details></li></ul><ul id="664d48eb-b89d-4793-8721-303420aa9136" class="bulleted-list"><li style="list-style-type:disc">Use single-qubit gates<ul id="42469f5d-163d-4def-922d-20d7a2c5d350" class="toggle"><li><details open=""><summary>State the Pauli gates</summary><figure id="1067566e-06f7-4b08-8af9-b83a3184ee99" class="image"><a href="Qiskit%20Exam%20Preparation%20Model%20Questions%2070e0f285d1a84b15a1f6f896f0ce33ca/Untitled%205.png"><img style="width:116px" src="Qiskit%20Exam%20Preparation%20Model%20Questions%2070e0f285d1a84b15a1f6f896f0ce33ca/Untitled%205.png"/></a></figure><figure id="3209cbba-0d1b-4bce-87d4-eba5146f916f" class="image"><a href="Qiskit%20Exam%20Preparation%20Model%20Questions%2070e0f285d1a84b15a1f6f896f0ce33ca/Untitled%206.png"><img style="width:130px" src="Qiskit%20Exam%20Preparation%20Model%20Questions%2070e0f285d1a84b15a1f6f896f0ce33ca/Untitled%206.png"/></a></figure><figure id="8c986534-619a-4eb9-9006-9e9d0c66f76c" class="image"><a href="Qiskit%20Exam%20Preparation%20Model%20Questions%2070e0f285d1a84b15a1f6f896f0ce33ca/Untitled%207.png"><img style="width:120px" src="Qiskit%20Exam%20Preparation%20Model%20Questions%2070e0f285d1a84b15a1f6f896f0ce33ca/Untitled%207.png"/></a></figure></details></li></ul><ul id="ca459de0-0e80-4a65-9c65-feba9ee56e2a" class="toggle"><li><details open=""><summary>State the Hadamard Gate and properties</summary><figure id="1ee4f96d-688b-4083-8a72-282d2b10968d" class="image"><a href="Qiskit%20Exam%20Preparation%20Model%20Questions%2070e0f285d1a84b15a1f6f896f0ce33ca/Untitled%208.png"><img style="width:150px" src="Qiskit%20Exam%20Preparation%20Model%20Questions%2070e0f285d1a84b15a1f6f896f0ce33ca/Untitled%208.png"/></a></figure><p id="2614bf4d-0ddf-4493-81f2-2017a2ca51b3" class="">We can see that this performs the transformations below:</p><figure id="c5c3d4cb-986e-4edd-9a58-7a422614b424" class="image"><a href="Qiskit%20Exam%20Preparation%20Model%20Questions%2070e0f285d1a84b15a1f6f896f0ce33ca/Untitled%209.png"><img style="width:106px" src="Qiskit%20Exam%20Preparation%20Model%20Questions%2070e0f285d1a84b15a1f6f896f0ce33ca/Untitled%209.png"/></a></figure></details></li></ul><ul id="19dc9bd3-fb7f-44c1-9694-340b19f8f6cc" class="toggle"><li><details open=""><summary>How do you add a H-gate on qubit 0?</summary><pre id="ae5609af-7822-4a48-8d98-3a22ed3c42cc" class="code"><code>circ.h(0)</code></pre></details></li></ul><ul id="9a202a83-56e0-4336-b4c1-7d7410a3a761" class="toggle"><li><details open=""><summary>State the Rϕ-gate and how it is specified in Qiskit</summary><figure id="7ae8b9a8-193d-4734-aa53-5220aa642287" class="image"><a href="Qiskit%20Exam%20Preparation%20Model%20Questions%2070e0f285d1a84b15a1f6f896f0ce33ca/Untitled%2010.png"><img style="width:129px" src="Qiskit%20Exam%20Preparation%20Model%20Questions%2070e0f285d1a84b15a1f6f896f0ce33ca/Untitled%2010.png"/></a></figure><pre id="64e9ac48-f121-4547-8bf0-a7457f50a31f" class="code"><code>circ.rz(phi, qubit)</code></pre></details></li></ul><ul id="9f790d25-0d37-42ab-8280-a916a3f01d0b" class="toggle"><li><details open=""><summary>State the S-gate (√Z-gate) and its conjugate</summary><figure id="68f3a200-3046-4e19-8b7d-aa5c8a198547" class="image"><a href="Qiskit%20Exam%20Preparation%20Model%20Questions%2070e0f285d1a84b15a1f6f896f0ce33ca/Untitled%2011.png"><img style="width:285px" src="Qiskit%20Exam%20Preparation%20Model%20Questions%2070e0f285d1a84b15a1f6f896f0ce33ca/Untitled%2011.png"/></a></figure></details></li></ul><ul id="6f20cddd-4811-47c2-948b-ff3b5571d66d" class="toggle"><li><details open=""><summary>State the T-gate</summary><figure id="c4717c08-2e92-4346-9afe-e6dc82cbb1bf" class="image"><a href="Qiskit%20Exam%20Preparation%20Model%20Questions%2070e0f285d1a84b15a1f6f896f0ce33ca/Untitled%2012.png"><img style="width:121px" src="Qiskit%20Exam%20Preparation%20Model%20Questions%2070e0f285d1a84b15a1f6f896f0ce33ca/Untitled%2012.png"/></a></figure></details></li></ul><ul id="d860ff06-1e36-47dd-a86b-2ec9264dcecc" class="toggle"><li><details open=""><summary>State the Ry gate</summary><figure id="b5899c9c-930b-4a17-9d12-e8725bd18c31" class="image"><a href="Qiskit%20Exam%20Preparation%20Model%20Questions%2070e0f285d1a84b15a1f6f896f0ce33ca/Untitled%2013.png"><img style="width:272px" src="Qiskit%20Exam%20Preparation%20Model%20Questions%2070e0f285d1a84b15a1f6f896f0ce33ca/Untitled%2013.png"/></a></figure></details></li></ul></li></ul><ul id="6d4fee29-94f9-47bd-b48a-d9f15a3b289b" class="bulleted-list"><li style="list-style-type:disc">Use multi-qubit gates<ul id="4e9ed5a2-458f-4db9-9f65-9f0fd338b03d" class="toggle"><li><details open=""><summary>How do you add a CX gate on control qubit 0 and target qubit 2?</summary><pre id="dab583a4-8231-4478-80de-02985af81df0" class="code"><code>circ.cx(0, 2)</code></pre></details></li></ul><ul id="7a152b05-d189-455c-8b64-9e5d2251c16f" class="toggle"><li><details open=""><summary>How does Qiskit represent a controlled-X (𝐶𝑋) operation with qubit 0 being the control and qubit 1 being the target?</summary><p id="dd274be5-f975-40a0-bff4-2019a37c7220" class="">In Qiskit qubits are labelled from right to left</p><figure id="e521a85d-c13a-4d95-9d90-f3e259c64654" class="image"><a href="Qiskit%20Exam%20Preparation%20Model%20Questions%2070e0f285d1a84b15a1f6f896f0ce33ca/Untitled%2014.png"><img style="width:358px" src="Qiskit%20Exam%20Preparation%20Model%20Questions%2070e0f285d1a84b15a1f6f896f0ce33ca/Untitled%2014.png"/></a></figure></details></li></ul><ul id="74c0d0a8-6cf2-4026-9058-e7b54045b717" class="toggle"><li><details open=""><summary>What is a controlled-controlled-NOT gate also known as?</summary><p id="2570c12e-6b84-445f-827e-32a544c5e9d5" class="">A Toffoli gate</p></details></li></ul><ul id="f98859a4-4bcb-4e68-8c4e-7026e7e3b040" class="toggle"><li><details open=""><summary>How do you apply a CCNOT gate in Qiskit?*</summary><pre id="4979a5a0-4962-4ae2-9a6e-b2cebfc1d89a" class="code"><code>qc.ccx(0,1,2)</code></pre><pre id="3d616341-ddec-4d14-95a4-374999a95d01" class="code"><code>mct = MCMT(gate=&#x27;cx&#x27;, num_ctrl_qubits = 2, 6 6 num_target_qubits = 1)
+qc.append(mct, [0,1,2]) qc = qc.decompose()</code></pre><pre id="eba8abb6-e637-4735-b721-b3e82e87e7a7" class="code"><code>from qiskit.circuit.library import CXGate
+ccx = CXGate().control()
+qc.append(ccx, [0,1,2])</code></pre></details></li></ul><ul id="6076bd8f-3b67-429d-b5f6-f995c47e0a01" class="toggle"><li><details open=""><summary>Define the swap gate as a circuit diagram</summary><figure id="01e5b4f8-ad24-422b-90a1-35907de8cb3f" class="image"><a href="Qiskit%20Exam%20Preparation%20Model%20Questions%2070e0f285d1a84b15a1f6f896f0ce33ca/Untitled%2015.png"><img style="width:490px" src="Qiskit%20Exam%20Preparation%20Model%20Questions%2070e0f285d1a84b15a1f6f896f0ce33ca/Untitled%2015.png"/></a></figure></details></li></ul><ul id="e1837a1c-ff02-41bc-bf95-01a41d42557b" class="toggle"><li><details open=""><summary>What is the MCMT gate?*</summary><p id="c4bd254d-ad7c-432a-b8e6-1871b34ece33" class="">The Multiple Control Multiple Target gate is a generalised gate allowing you to add multiple target and control qubits to a range of gate types</p><pre id="b4ce9beb-9f66-4668-9df3-6a41b73c5193" class="code code-wrap"><code>MCMT(gate,num_ctrl_qubits, num_target_qubits)</code></pre><p id="8bb36efc-758f-4c0c-bf0f-f6d449838a4b" class="">Where:</p><ul id="61f56122-7ab6-4fae-9169-b8d8bde44e40" class="bulleted-list"><li style="list-style-type:disc"><strong>gate</strong>: Is the type of gate you want to implement</li></ul><ul id="c0e5e892-9833-46cc-85a9-f53a86e1d67a" class="bulleted-list"><li style="list-style-type:disc"><strong>num_</strong><em><strong>ctrl</strong></em><strong>_qubits</strong>: The number of control qubits</li></ul><ul id="a3d84ea1-3b1c-4e86-836d-1246974d579d" class="bulleted-list"><li style="list-style-type:disc"><strong>num_</strong><em><strong>target</strong></em><strong>_qubits</strong>: The number of target qubits</li></ul></details></li></ul></li></ul><ul id="bdfc2822-8c89-4ab0-8909-58a1ae8cc464" class="toggle"><li><details open=""><summary>Return the depth of circuit (length of critical path)</summary><pre id="fffe954d-fed2-489d-879a-614cebd02724" class="code"><code>circuit.depth()</code></pre></details></li></ul><ul id="1e89f071-98cf-4c6e-85cf-46b8cc607033" class="toggle"><li><details open=""><summary>What parameters does the Gate initialisation method accept?</summary><pre id="43eecfab-a23b-48a7-b747-71ea44b31695" class="code"><code>name (str) – The Qobj name of the gate.
+
+num_qubits (int) – The number of qubits the gate acts on.
+
+params (List) – A list of parameters.
+
+label (Optional[str]) – An optional label for the gate.</code></pre></details></li></ul><ul id="1e253143-a7ab-4c92-b05a-f3f063986c2d" class="toggle"><li><details open=""><summary>Extend quantum circuits</summary></details></li></ul><ul id="1dd610ff-27fe-4aca-8aec-57d1ac3a56cb" class="toggle"><li><details open=""><summary>Which classes in Qiskit can be directly converted to an Operator object?</summary><ul id="9588894b-7b3b-40ee-8af1-a61805564d34" class="bulleted-list"><li style="list-style-type:disc"><code>Pauli</code> objects</li></ul><ul id="fb4aa1e3-c482-4cc3-93a8-9e41edce348d" class="bulleted-list"><li style="list-style-type:disc"><code>Gate</code> and <code>Instruction</code> objects</li></ul><ul id="4b1786e7-f6cd-479a-9ca3-57cc26ed79d3" class="bulleted-list"><li style="list-style-type:disc"><code>QuantumCircuits</code> objects</li></ul></details></li></ul><ul id="fb887ae6-d899-44ac-aa46-2b7a01c238e4" class="toggle"><li><details open=""><summary>Which method converts a quantum circuit into a new gate?</summary><pre id="06e44003-d2ff-4208-987f-a448101ca5b0" class="code"><code>qc_gate = qc.to_gate()</code></pre></details></li></ul><h2 id="f4777659-203a-42b4-92a2-2d88f564a430" class="">2. Executing Experiments - 3%</h2><ul id="4fff0674-4f04-4cc2-a99a-da47f90913a9" class="toggle"><li><details open=""><summary>Then, dive a bit deeper into quantum circuits, which are a combination of quantum gates, measurements and resets. Initially, make sure you cover the below topics. To understand the circuits, please go through these websites:</summary><ul id="a1f35c24-8e87-422f-a557-ca2b13a8d397" class="bulleted-list"><li style="list-style-type:disc"><a href="https://qiskit.org/textbook/ch-algorithms/defining-quantum-circuits.html">https://qiskit.org/textbook/ch-algorithms/defining-quantum-circuits.html</a></li></ul><ul id="0a9c8039-bf20-4439-9314-5cbfd89820be" class="bulleted-list"><li style="list-style-type:disc"><a href="https://qiskit.org/textbook/ch-states/representing-qubit-states.html">https://qiskit.org/textbook/ch-states/representing-qubit-states.html</a></li></ul><ul id="3bc30f18-5dc9-4bfc-ad90-25e875ed4e86" class="bulleted-list"><li style="list-style-type:disc"><a href="https://qiskit.org/documentation/stubs/qiskit.circuit.Gate.html">https://qiskit.org/documentation/stubs/qiskit.circuit.Gate.html</a></li></ul><ul id="e4c5927e-d321-4d04-8a3c-b06532c93afb" class="bulleted-list"><li style="list-style-type:disc"><a href="https://qiskit.org/documentation/tutorials/circuits_advanced/03_advanced_circuit_visualization.html">https://qiskit.org/documentation/tutorials/circuits_advanced/03_advanced_circuit_visualization.html</a><ol type="1" id="adf501ed-338d-42f1-97df-23b5cc0c9765" class="numbered-list" start="1"><li><a href="https://qiskit.org/textbook/ch-states/single-qubit-gates.html">Using various single-qubit gates</a></li></ol><ol type="1" id="b05db8be-7e8a-4c66-9262-5008f7143f9e" class="numbered-list" start="2"><li><a href="https://qiskit.org/textbook/ch-gates/multiple-qubits-entangled-states.html">Using various multi-qubit gates</a></li></ol><ol type="1" id="742fe6d3-2476-40f2-916c-d0bb6065be1d" class="numbered-list" start="3"><li><a href="https://qiskit.org/documentation/stubs/qiskit.circuit.library.Barrier.html">Using barrier operation</a></li></ol><ol type="1" id="0adfe760-1469-4253-915b-d05c973fef31" class="numbered-list" start="4"><li><a href="https://arnaldogunzi.medium.com/how-to-calculate-the-depthof-a-quantum-circuit-in-qiskit-868505abc104">Returning the circuit depth</a></li></ol><ol type="1" id="ddf090cb-884d-49cd-8af8-ff92046d37de" class="numbered-list" start="5"><li><a href="https://qiskit.org/documentation/stubs/qiskit.extensions.Initialize.html">Extending quantum circuits</a></li></ol><ol type="1" id="1d245590-38d1-4de3-90cc-ad4a3c2c784e" class="numbered-list" start="6"><li><a href="https://qiskit.org/documentation/install.html">Operations around the qiskit version</a></li></ol><ol type="1" id="dd24a883-8514-4d4a-a9d2-da57ecb08074" class="numbered-list" start="7"><li><a href="https://qiskit.org/documentation/tutorials/circuits_advanced/02_operators_overview.html">Operators</a></li></ol><ol type="1" id="720a6ed5-5390-4426-a9a6-1e82d6317609" class="numbered-list" start="8"><li><a href="https://qiskit.org/documentation/stubs/qiskit.quantum_info.state_fidelity.html">Fidelity</a></li></ol></li></ul></details></li></ul><p id="2d458983-8133-49d5-8c28-66b8af357d91" class="">A topic to study next would be quantum registers. Visiting these resources will shed some additional light in this area:<div class="indented"><ol type="1" id="038818c5-d8c4-48bd-a3ab-f16de2c4503a" class="numbered-list" start="1"><li>Constructing Quantum Circuits : <a href="https://qiskit.org/textbook/ch-algorithms/defining-quantum-circuits.html">https://qiskit.org/textbook/ch-algorithms/defining-quantum-circuits.html</a></li></ol><ol type="1" id="369ee020-f36f-4e7b-92e1-13233035ce92" class="numbered-list" start="2"><li>Constructing multi-qubit quantum registers : <a href="https://qiskit.org/textbook/ch-gates/multiple-qubits-entangled-states.html">https://qiskit.org/textbook/ch-gates/multiple-qubits-entangled-states.html</a></li></ol><ol type="1" id="e4ca73e8-91ed-405b-9e3a-9051e87acd51" class="numbered-list" start="3"><li>Measuring quantum circuits into classical registers: <a href="https://qiskit.org/documentation/stubs/qiskit.circuit.Measure.html">https://qiskit.org/documentation/stubs/qiskit.circuit.Measure.html</a></li></ol><ol type="1" id="66dbbdf7-7db4-4af4-87f8-d4cfe1c60ebd" class="numbered-list" start="4"><li>Classical and quantum registers: <a href="https://qiskit.org/documentation/stubs/qiskit.circuit.QuantumRegister.html">https://qiskit.org/documentation/stubs/qiskit.circuit.QuantumRegister.html</a></li></ol><ol type="1" id="e55892d3-cec3-4465-8361-250e15c6ebbb" class="numbered-list" start="5"><li>Executing a quantum circuit: <a href="https://qiskit.org/documentation/apidoc/execute.html">https://qiskit.org/documentation/apidoc/execute.html</a></li></ol></div></p><h2 id="122d0f93-7768-4ae1-9fff-71671357db40" class="">3. Implement BasicAer: Python-based Simulators - 3%</h2><ol type="1" id="18f9a227-01e5-4e12-b4cf-205a4a9a601f" class="numbered-list" start="1"><li>Returning the histogram data of an experiment</li></ol><ol type="1" id="489eaee0-7a2d-4067-bc91-7354258868ed" class="numbered-list" start="2"><li>Returning the statevector of an experiment</li></ol><ol type="1" id="72d7577e-f8e3-4e22-a5ea-32447a5e3171" class="numbered-list" start="3"><li>Returning the unitary of an experiment</li></ol><ol type="1" id="3f3d3211-9606-4ea5-807d-7a0dcc757f3f" class="numbered-list" start="4"><li>Available simulators</li></ol><ol type="1" id="cce6f8fe-7e31-4376-82db-57ac396e4bfe" class="numbered-list" start="5"><li>Accessing a statevector_simulator backend</li></ol><ol type="1" id="d2ad4cb8-a217-47ee-9028-334dd9054115" class="numbered-list" start="6"><li>Accessing a qasm_simulator backend</li></ol><ol type="1" id="725dd6b6-8f0d-4c0a-938c-71ebad90ff4f" class="numbered-list" start="7"><li>Accessing a unitary_simulator backend</li></ol><p id="ba398d26-c759-4b0e-9570-b26b264041bb" class="">
+</p><ul id="2585f25c-e5ac-4961-8942-26c03b015fa9" class="toggle"><li><details open=""><summary>What is Qiskit Aer?</summary><p id="1fcb862e-0aab-4996-b4ce-062d2829e3a0" class="">Simulators are used to mimic the actual quantum device. Aer is a high performance simulator for quantum circuits that includes noise models.</p></details></li></ul><p id="c191169f-7fa9-4b31-8f7a-dbbb8a3f71f8" class="">
+</p><p id="87f59bdf-5153-4b29-aa72-030a51c89393" class="">Below are the links to follow through these topics:</p><ul id="52ee3ae7-9677-4a69-a0a0-da52e26bffe1" class="bulleted-list"><li style="list-style-type:disc"><a href="https://qiskit.org/documentation/tutorials/simulators/1_aer_provider.html">https://qiskit.org/documentation/tutorials/simulators/1_aer_provider.html</a></li></ul><ul id="748ea3ef-abc7-4f55-8dfb-fc8e08898694" class="bulleted-list"><li style="list-style-type:disc"><a href="https://qiskit.org/documentation/apidoc/providers_basicaer.html">https://qiskit.org/documentation/apidoc/providers_basicaer.html</a></li></ul><h2 id="7c7a5d95-06ea-42bb-898c-01bd8c7577e9" class="">4. Implement Qasm - 1%</h2><ol type="1" id="088af290-1cff-4c66-b35e-23ac5a0271c4" class="numbered-list" start="1"><li>Read a QASM file and string</li></ol><p id="562f3130-42a6-4569-87e3-4cc31bbc3f47" class="">
+</p><ul id="c8a579c7-399b-449a-bbbb-1100179cc248" class="toggle"><li><details open=""><summary>What is QASM?</summary><p id="8b0b5a8a-a3d4-42f4-a76b-f58ad19d5f6f" class="">Open QASM is Open Quantum Assembly Language is an intermediate language for quantum instructions.</p></details></li></ul><p id="3c95aed2-2dd5-479d-a8a3-f8ca965ad040" class="">Below are some resources to understand the Open QASM and how to use it in Qiskit:</p><ul id="fef855db-5f3a-4afd-aa07-868acd3adfd2" class="bulleted-list"><li style="list-style-type:disc"><a href="https://qiskit.org/documentation/stubs/qiskit.qasm.Qasm.html">https://qiskit.org/documentation/stubs/qiskit.qasm.Qasm.html</a></li></ul><ul id="cd51cede-714f-4cbb-912e-9798e4e2bb00" class="bulleted-list"><li style="list-style-type:disc"><a href="https://medium.com/qiskit/a-new-openqasm-for-a-new-era-of-dynamic-circuits-87f031cac49">https://medium.com/qiskit/a-new-openqasm-for-a-new-era-of-dynamic-circuits-87f031cac49</a></li></ul><ul id="49ca5ada-2359-4c60-b4b1-e5b3b55f9cf5" class="bulleted-list"><li style="list-style-type:disc"><a href="https://github.com/Qiskit/openqasm">https://github.com/Qiskit/openqasm</a></li></ul><p id="05130c9a-7e14-4d01-9aac-e605fe8c3b87" class="">
+</p><ul id="bdb089ec-3d59-45dd-aa4d-3d3667ab4e2d" class="toggle"><li><details open=""><summary>Return the OpenQASM string for a circuit</summary><pre id="b8742bc8-10be-4c7b-81e4-54e608d3dca9" class="code"><code>print(qc.qasm())</code></pre></details></li></ul><ul id="a8d5676c-25f1-4d5e-9e70-3fedee4c4e6b" class="toggle"><li><details open=""><summary>Read a QASM file into a QuantumCircuit object</summary><pre id="7ffb48da-b0f6-4746-8090-01e41f60a459" class="code"><code>qc = QuantumCircuit.from_qasm_file(&quot;/path/to/file.qasm&quot;)</code></pre></details></li></ul><ul id="b884b6f6-0c4d-436e-a01e-5d9e94403d16" class="toggle"><li><details open=""><summary>Read a QASM file into a qasmObject*</summary><pre id="9c05c353-85c1-4359-9836-a58267007bb7" class="code"><code>from qiskit import qasm
+
+qasmObj = qasm.Qasm(&#x27;qasm_filename&#x27;)</code></pre></details></li></ul><p id="d1f91056-4964-4993-91bb-e254590a6674" class="">
+</p><h2 id="52a0ee2f-84de-4758-83eb-5e788c8d4b78" class="">5. <strong><strong>Compare and Contrast Quantum Information - 10%</strong></strong></h2><ol type="1" id="a8a4b424-c49c-4653-97a1-a95fc4cbb239" class="numbered-list" start="1"><li>Use classical and quantum registers</li></ol><ol type="1" id="7568a43a-28c4-4171-b8d4-2511913e3b2d" class="numbered-list" start="2"><li>Use operators</li></ol><ol type="1" id="ab239cde-1850-40ad-a9df-6c1263748fef" class="numbered-list" start="3"><li>Measure fidelity</li></ol><p id="440e1604-d060-4803-85b3-7cb1de766333" class="">
+</p><ul id="46cc7d80-b44b-4964-8da7-3ff3a18b70d1" class="toggle"><li><details open=""><summary>How do you create a quantum circuit with four quantum bits and four classical bits?</summary><pre id="b2f6e910-4ba9-4cea-af51-0770db270367" class="code"><code>QuantumCircuit(4, 4)</code></pre></details></li></ul><ul id="d4be2e09-5e1f-4451-aa52-ffd1688f15d2" class="toggle"><li><details open=""><summary>Use classical and quantum registers</summary><pre id="b593b7e0-0781-4495-84bd-9a1fd0d2b5ac" class="code"><code>QuantumCircuit(QuantumRegister(2), ClassicalRegister(2))</code></pre></details></li></ul><ul id="3852df11-8239-45ec-9d44-48a6adfdc21a" class="toggle"><li><details open=""><summary>Use operators</summary></details></li></ul><ul id="02cfec0f-0408-4452-a025-d227247c29a6" class="toggle"><li><details open=""><summary>Measure the fidelity between two states*</summary><pre id="1121cd6a-c5cc-4e4e-a206-05a1027f02e0" class="code"><code>state_fidelity(state1, state2)</code></pre></details></li></ul><ul id="c4e8d91c-f9a7-4ac3-808d-bdf48d949120" class="toggle"><li><details open=""><summary>Return the fidelity of a noisy quantum channel*</summary><pre id="736ed4ee-3a89-4dcc-924b-7ecfd48dd764" class="code"><code>process_fidelity()</code></pre></details></li></ul><ul id="ca035b71-61de-4c84-818f-6ad96a1a7993" class="toggle"><li><details open=""><summary>Return the density matrix of 2 matrices*</summary><pre id="17971f17-9445-4f60-9574-e8b22028ac8d" class="code"><code>matrix1 = DensityMatrix(matrix1)
+print(matrix1.tensor(matrix2))</code></pre></details></li></ul><p id="3b3a074b-9d3f-40b6-82c3-c925d46c4086" class="">
+</p><h2 id="2e7a8d76-3d83-4683-8b10-7f2eb99feaf8" class="">6. Return the Experiment Results - 7%</h2><ol type="1" id="ca2c69c5-722e-4ae0-8832-a7852c586675" class="numbered-list" start="1"><li>Return and understand the histogram data of an experiment</li></ol><ol type="1" id="b3bae05a-4d7e-4f26-8458-059a4b2d8b41" class="numbered-list" start="2"><li>Return and understand the statevector of an experiment</li></ol><ol type="1" id="ae57e94c-d2ed-4cf0-acb6-e0b16a8f08c7" class="numbered-list" start="3"><li>Return and understand the unitary of an experiment</li></ol><p id="7d4306b5-bf84-4873-8db6-194ee9230ba3" class="">
+</p><ul id="23e51891-c569-4b91-80f4-c65cac9061cf" class="toggle"><li><details open=""><summary>Return the histogram data of an experiment</summary><pre id="ed156ad8-b34d-4030-b0cc-6537c22dbff7" class="code"><code>from qiskit.visualization import plot_histogram
+
+backend_sim = Aer.get_backend(&#x27;qasm_simulator&#x27;)
+job_sim = execute(qc, backend_sim, shots=1024)
+
+# Grab the results from the job.
+result_sim = job_sim.result()
+
+counts = result_sim.get_counts(qc)
+plot_histogram(counts)</code></pre></details></li></ul><ul id="70234b06-dd11-4c61-b361-c77e70680217" class="toggle"><li><details open=""><summary>Return the statevector of an experiment</summary><pre id="a85c8c2e-fbf1-44bb-a6e1-74b6498f320a" class="code"><code>from qiskit import Aer
+
+# Run the quantum circuit on a statevector simulator backend
+backend = Aer.get_backend(&#x27;statevector_simulator&#x27;)
+job = execute(qc, backend)
+result = job.result()
+
+outputstate = result.get_statevector(circ, decimals=3)</code></pre></details></li></ul><ul id="c1be02fb-8adf-4b9e-8ce2-310070bf5596" class="toggle"><li><details open=""><summary>Return the unitary of an experiment</summary><pre id="8411f208-196b-490d-a804-c8f62bbbbd16" class="code"><code>from qiskit.quantum_info import Operator
+
+U = Operator(circ)
+
+# Show the results
+U.data</code></pre></details></li></ul><h2 id="9b8a122d-8e5c-4f19-87cc-97280b1e17af" class="">7. Use Qiskit Tools - 1%</h2><ol type="1" id="d2986f53-3306-4e61-85e0-2efe9c55f7b8" class="numbered-list" start="1"><li>Monitor the status of a job instance</li></ol><ol type="1" id="ad732025-0c1b-45af-b827-9b67099580aa" class="numbered-list" start="2"><li>Qiskit Backend Overview</li></ol><p id="8cd1668e-c6f5-49e7-9bd2-f986126efaa1" class="">Qiskit Backend refers to the functions used in IBM Quantum Experience device. To understand how the Qiskit Backend works, go through the resources below,<div class="indented"><ul id="5b61fad4-f2ef-48bf-8ee4-dd313f81216c" class="bulleted-list"><li style="list-style-type:disc"><a href="https://quantum-computing.ibm.com/docs/manage/account/ibmq">https://quantum-computing.ibm.com/docs/manage/account/ibmq</a></li></ul><ul id="b29fe00c-8aa5-46dd-8e31-9ed7d8f7504e" class="bulleted-list"><li style="list-style-type:disc"><a href="https://qiskit.org/documentation/stubs/qiskit.providers.ibmq.IBMQBackend.html">https://qiskit.org/documentation/stubs/qiskit.providers.ibmq.IBMQBackend.html</a></li></ul><ul id="86a9e4bc-d785-466a-90b4-628e590a4f63" class="bulleted-list"><li style="list-style-type:disc"><a href="https://medium.com/qiskit/qiskit-backends-what-they-are-and-how-to-work-with-them-fb66b3bd0463">https://medium.com/qiskit/qiskit-backends-what-they-are-and-how-to-work-with-them-fb66b3bd0463</a></li></ul></div></p><ul id="48bbf2b4-7a15-4c51-8742-f39c1037883b" class="toggle"><li><details open=""><summary>How to monitor the status of a job instance*</summary><pre id="e17e310f-9195-447f-aa90-cfde536dc994" class="code code-wrap"><code># job = execute(qc, backend)
+# job_monitor(job)
+
+job_monitor(IBM.Job)</code></pre></details></li></ul><h2 id="258184e8-9529-427f-a06e-c92a0430a7a4" class="">8. Display and Use System Information - 3%</h2><ul id="c3156eba-bc2c-4cd7-b181-2c29e696ea39" class="toggle"><li><details open=""><summary>Perform operations around the Qiskit version*</summary><pre id="d1b39657-a2e9-445a-9dfd-0a39408ac58d" class="code"><code>import qiskit
+qiskit.__qiskit_version__</code></pre><pre id="456b5d16-67e0-4604-952c-7f12de02b8a2" class="code"><code>import qiskit.tools.jupyter
+%qiskit_version_table</code></pre></details></li></ul><ul id="35f49d0f-68eb-4608-a02a-13fa9d15652b" class="toggle"><li><details open=""><summary>Use information gained from <em>qiskit_backend_overview*</em></summary><pre id="986fdc63-176e-4525-9088-c578df3d49d0" class="code code-wrap"><code>from qiskit import IBMQ
+IBMQ.load_account()
+
+import qiskit.tools.jupyter
+%matplotlib inline
+%qiskit_backend_overview</code></pre></details></li></ul><h2 id="566d3104-e611-496b-a131-68593fc81420" class="">9. Construct Visualizations - 19%</h2><ol type="1" id="a1006237-5c99-461c-9835-89e86e392e08" class="numbered-list" start="1"><li>Draw a circuit</li></ol><ol type="1" id="129bbea6-bb3b-455f-8414-1da8ff8e095f" class="numbered-list" start="2"><li>Plot a histogram of data</li></ol><ol type="1" id="1ba9d665-7e8b-4073-82f3-2d458c574647" class="numbered-list" start="3"><li>Plot a Bloch multivector</li></ol><ol type="1" id="1e70fbb5-84b8-4059-b7b1-5f5eb34dada8" class="numbered-list" start="4"><li>Plot a Bloch vector</li></ol><ol type="1" id="03998115-702f-4098-945f-5ba0affadcc1" class="numbered-list" start="5"><li>Plot a QSphere</li></ol><ol type="1" id="424fdf35-f5ef-4ee8-a616-82ecc4fb7d58" class="numbered-list" start="6"><li>Plot a density matrix</li></ol><ol type="1" id="61d0cb83-3ea7-4281-ba86-01b62ba2a2e5" class="numbered-list" start="7"><li>Plot a gate map with error rates</li></ol><p id="9120e14f-829c-48e7-982a-77b7abf1dc7c" class="">Visualization deals with the plotting various data in Qiskit. Below are some resources to understand these concepts:<div class="indented"><ul id="50afd96c-63dd-43ca-a31f-2511a6d09e10" class="bulleted-list"><li style="list-style-type:disc"><a href="https://qiskit.org/documentation/tutorials/circuits/2_plotting_data_in_qiskit.html">https://qiskit.org/documentation/tutorials/circuits/2_plotting_data_in_qiskit.html</a></li></ul><ul id="72b6320c-f2dc-400c-a8b8-46ee83e11c20" class="bulleted-list"><li style="list-style-type:disc"><a href="https://qiskit.org/documentation/tutorials/circuits_advanced/03_advanced_circuit_visualization.html">https://qiskit.org/documentation/tutorials/circuits_advanced/03_advanced_circuit_visualization.html</a>:<ol type="1" id="3963e7a4-8826-41da-9ea4-abe781d6afc9" class="numbered-list" start="1"><li>Drawing a circuit Plotting a histogram of data</li></ol><ol type="1" id="71c5a30d-b8d0-4f57-9ef2-9fbc174fd715" class="numbered-list" start="2"><li>Plotting a Bloch multivector</li></ol><ol type="1" id="52ace070-8a4a-42ff-8abc-f3804dae20a2" class="numbered-list" start="3"><li>Plotting a Bloch vector</li></ol><ol type="1" id="b5856d54-c5f1-474a-b2f1-6715356cd816" class="numbered-list" start="4"><li>Plotting a QSphere</li></ol><ol type="1" id="8f0404bf-9635-4861-a6a1-c0bd7c133f73" class="numbered-list" start="5"><li>Plotting a density matrix</li></ol><ol type="1" id="be465093-2103-4560-a8dc-4493dc98b6a8" class="numbered-list" start="6"><li>Plotting a gate map with error rates</li></ol></li></ul></div></p><p id="2a60f624-3b5f-4742-bfea-0f16d484c9c3" class="">
+</p><ul id="1a68a427-9eec-4643-a5de-11c1e9fd3ca3" class="toggle"><li><details open=""><summary>Draw a circuit</summary><pre id="8e10c70c-3a9c-429b-97d8-cf8d94e05d61" class="code"><code>circ.draw(&#x27;mpl&#x27;)</code></pre></details></li></ul><ul id="713bbeae-e1da-4491-b894-5ee0a0e44a8a" class="toggle"><li><details open=""><summary>List the 4 output parameters that can be used to choose the drawing format*</summary><ul id="f61b6fbd-7401-4aa0-9759-36486e7a2759" class="bulleted-list"><li style="list-style-type:disc"><strong>text</strong>: ASCII art TextDrawing that can be printed in the console. <em>(default)</em></li></ul><ul id="d5b38e19-1871-4199-92a8-38fb3357b7ac" class="bulleted-list"><li style="list-style-type:disc"><strong>matplotlib</strong>: images with color rendered purely in Python.</li></ul><ul id="02a08a79-0247-448e-90b5-f96dbc53743d" class="bulleted-list"><li style="list-style-type:disc"><strong>latex</strong>: high-quality images compiled via latex.</li></ul><ul id="b156ce90-412c-4c5a-a87a-34be01440082" class="bulleted-list"><li style="list-style-type:disc"><strong>latex_source</strong>: raw uncompiled latex output.</li></ul></details></li></ul><ul id="a73fa6c9-558e-476d-aad8-fbea94720b98" class="toggle"><li><details open=""><summary>Display the basis gates used in a circuit*</summary><pre id="84a9dcf7-8604-41d9-9508-c6107e3e1192" class="code"><code>QuantumCircuit.decompose().draw()</code></pre></details></li></ul><ul id="5aff8ff9-0c7c-4b2f-8de5-6e373913cde2" class="toggle"><li><details open=""><summary>Plot a histogram of data</summary><pre id="38b6b382-800e-47e3-bc07-3115cd624ae0" class="code"><code>result = execute(circ, backend, shots=1000).result()
+counts  = result.get_counts(circ)
+
+plot_histogram(counts, legend = [&#x27;All counts&#x27;])</code></pre></details></li></ul><ul id="e7199a55-6f99-4386-988c-63895303878c" class="toggle"><li><details open=""><summary>Plot a Bloch multivector</summary><pre id="2fdb8da3-7f97-4c7b-a7c5-3e2f064400e4" class="code"><code>plot_bloch_multivector(psi)</code></pre></details></li></ul><ul id="9d7e8c07-5050-4345-9b57-072e7d07dd71" class="toggle"><li><details open=""><summary>Plot a Bloch vector</summary><pre id="b46bc6e8-d401-4443-8b17-e70a5bb1de1d" class="code"><code>plot_bloch_vector(psi)</code></pre></details></li></ul><ul id="bf1b5a1d-c754-414f-bbfb-86d77eb60298" class="toggle"><li><details open=""><summary>Describe the QSphere</summary><p id="534a86eb-d958-4fc1-9127-a7683ade03bd" class="">Each amplitude is represented by a blob on the surface of a sphere. The size of the blob is proportional to the magnitude of the amplitude, and the colour is proportional to the phase of the amplitude.</p></details></li></ul><ul id="72c93a81-1289-41fe-8972-8d3ce6c8f478" class="toggle"><li><details open=""><summary>Plot a QSphere*</summary><pre id="eab0bbf2-d5ae-4305-89e2-92b36609f265" class="code"><code>state.draw(&#x27;qsphere&#x27;)</code></pre><pre id="e4b2f841-be28-4933-98e3-1199cf2ec7b1" class="code"><code>result = execute(qc, simulator).result()
+quantum_state = result.get_statevector(qc)
+plot_state_qsphere(quantum_state)</code></pre></details></li></ul><ul id="89c73719-3515-4fb1-b728-b48bf72532af" class="toggle"><li><details open=""><summary>Plot a density matrix</summary><pre id="ac6c3401-be03-46f0-b97d-edf9c4a6f501" class="code"><code>from qiskit.visualization import plot_state_city
+plot_state_city(rho_AB.data, title=&#x27;Density Matrix&#x27;)</code></pre></details></li></ul><ul id="500ed6e8-a7d8-4f50-bde3-b09923cc10a5" class="toggle"><li><details open=""><summary>Plot a device gate map*</summary><pre id="52e49aa9-bff5-4ddc-b4de-b30bb7780143" class="code"><code>backend = accountProvider.get_backend(&#x27;ibmq_vigo&#x27;)
+
+plot_gate_map(backend)</code></pre></details></li></ul><ul id="1243fa17-6384-4df5-9999-4b8db5dfc033" class="toggle"><li><details open=""><summary>Plot a gate map with error rates</summary><pre id="205fea87-647f-425a-8dff-f97447802c13" class="code"><code>from qiskit.visualization import plot_gate_map
+%matplotlib inline
+
+provider = IBMQ.load_account()
+accountProvider = IBMQ.get_provider(hub=&#x27;ibm-q&#x27;)
+backend = accountProvider.get_backend(&#x27;ibmq_vigo&#x27;)
+
+coupling_map = backend.configuration().coupling_map</code></pre></details></li></ul><h2 id="69f3268d-a3d9-41d1-811d-f1f45ea0505d" class="">10. Access Aer Provider - 6%</h2><ol type="1" id="1b7d2558-1939-4d85-b540-099088471053" class="numbered-list" start="1"><li>Access a <em>statevector_simulator</em> backend</li></ol><ol type="1" id="736b9241-686c-4552-addc-0360c664fcd6" class="numbered-list" start="2"><li>Access a <em>qasm_simulator</em> backend</li></ol><ol type="1" id="192af441-b055-4acb-8dc0-f183f73a0318" class="numbered-list" start="3"><li>Access a <em>unitary_simulator</em> backend</li></ol><p id="e2ba096e-d18e-442c-9f5e-00846a150790" class="">
+</p><ul id="629e77cb-353e-485e-b358-7c620de1b5d5" class="toggle"><li><details open=""><summary>Assess a <em>statevector_simulator</em> backend</summary><pre id="f696e79b-b9a9-4f04-9768-909d23c97e88" class="code"><code>backend = Aer.get_backend(&#x27;statevector_simulator&#x27;)</code></pre></details></li></ul><ul id="2f43af21-e07c-4178-bc01-333b1f053984" class="toggle"><li><details open=""><summary>Assess a <em>qasm_simulator</em> backend</summary><pre id="67a42e25-92ba-4ff4-81c7-fd1149aead52" class="code"><code>backend = Aer.get_backend(&#x27;qasm_simulator&#x27;)</code></pre></details></li></ul><ul id="337a248e-a123-4947-9f55-a6e762ed0390" class="toggle"><li><details open=""><summary>Assess a <em>unitary_simulator</em> backend</summary><pre id="34fb897f-4fc4-4d08-b20a-81ee148f2c00" class="code"><code>backend = Aer.get_backend(&#x27;unitary_simulator&#x27;)</code></pre></details></li></ul><ul id="6727cb91-0213-4472-b796-a22c83f36169" class="toggle"><li><details open=""><summary>Get the final unitary matrix for an experiment*</summary><pre id="df6f16e7-9121-449d-ad50-b8cc14cfe698" class="code"><code>get_unitary([experiment, decimals])</code></pre></details></li></ul></div></article></body></html>
