@@ -1,66 +1,171 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>CNOT.xyz</title>
-    <style>
-      body {
-        background-color: #260042;
-        color: white;
-        font-family: Arial, sans-serif;
-      }
-      .container {
-        max-width: 800px;
-        margin: 0 auto;
-        padding: 20px;
-      }
-      h1 {
-        color: #ff14dc;
-      }
-      .menu {
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
-      }
-      .menu li {
-        display: inline-block;
-        margin-right: 10px;
-      }
-      .menu a {
-        text-decoration: none;
-        color: #ff14dc;
-      }
-    </style>
-  </head>
-  <body>
-    <div class="container">
-      <h1>Welcome to <a href="index.html">CNOT.XYZ</a> a Quantum Cryptography Project</h1>
-      <h2>Control</h2>
-      <img src="img/logo.png" width="25%">
-      <p>The CNOT (Controlled NOT) gate is an important building block for quantum computing. It acts on two qubits: a control qubit and a target qubit. If the control qubit is in the state "1", the CNOT gate will flip the state of the target qubit (from "0" to "1" or from "1" to "0"), but if the control qubit is in the state "0", the CNOT gate leaves the target qubit unchanged.</p>
-      <img src="img/cnot.png" width="25%">
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Quantum Developer</title>
+  <link rel="stylesheet" href="skeleton.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>James Tricker</h1>
+        <h2>Quantum Software Developer</h2>
+        <div class="theme-switch-wrapper">
+            <span>Light Mode</span>
+            <label class="theme-switch" for="theme-checkbox">
+              <input type="checkbox" id="theme-checkbox" />
+              <div class="slider"></div>
+            </label>
+            <span>Dark Mode</span>
+          </div>       
+    </header>
       
-      <h2>Pauli</h2>
-      <p>The Pauli X, Y, and Z gates are single-qubit gates that are commonly used in quantum computing. </p>
-      <img src="img/x.png" width="10%">
-      <p> Pauli X gate (also known as the NOT gate) flips the state of a qubit from "0" to "1" or from "1" to "0".</p> 
-      <img src="img/y.png" width="10%">
-      <p>The Pauli Y and Z gates are used to rotate the state of a qubit around the Y and Z axes of the Bloch sphere, respectively.</p>
-      <img src="img/z.png" width="10%">
+  <main>
+    <section id="about">
+        <h3>About Me</h3>
+        <p>
+          Hello! I'm James, a Software Developer with a passion for quantum computing, cryptography and optimization. I have a Master's in Physics (Quantum Theory) from Oxford University.
+        </p>
+        <p>
+          My expertise lies in designing and implementing quantum algorithms, optimizing quantum circuits and developing quantum software. I enjoy working on challenging problems and exploring the cutting-edge developments in quantum computing. In my free time, I write blog posts and practice gymnastics.
+        </p>
 
-      <h2>Universality</h2>
-      <p>Today, the CNOT gate and the Pauli gates form a universal set of gates, which means that any quantum operation can be constructed by using some combination of these gates. This is important because it means that any quantum algorithm can be implemented using these gates, which makes them an essential part of quantum computing.</p>
-      <img src="img/universality.png" width="15%">
-      <hr>
-    </div>
-    <div class="container">
-    <!-- <h2>Links</h2> -->
-    <ul class="menu">
-      <li><h3><a href="https://jamesquantum.com", target="_blank">Blog</a></h3></li>
-      <li><h3><a href="https://wiki.jamesquantum.com", target="_blank">Quantum Developer Wiki</a></h3></li>
-      <li><h3><a href="https://colab.research.google.com/drive/1k8xwpgUaSKyYmehMo5eiW7jF-iGUoON_?usp=sharing", target="_blank">Quantum Decryption</a></h3></li>
-      <li><h3><a href="https://qrng.cnot.xyz", target="_blank">QuantumRNG.crypto (in development)</a></h3></li>
-      <!-- <li><a href="Qiskit">Optimization</a></li> -->
-    </ul>
-</div>
-  </body>
+          <div class="atom">
+            <div class="nucleus">
+                <div class="nucleon proton"></div>
+                <div class="nucleon proton"></div>
+                <div class="nucleon proton"></div>
+                <div class="nucleon proton"></div>
+                <div class="nucleon proton"></div>
+                <div class="nucleon proton"></div>
+                <div class="nucleon neutron"></div>
+                <div class="nucleon neutron"></div>
+                <div class="nucleon neutron"></div>
+                <div class="nucleon neutron"></div>
+                <div class="nucleon neutron"></div>
+                <div class="nucleon neutron"></div>
+              </div>
+
+              <div class="electron-shell electron-shell-1s">
+                <div class="electron-orbit">
+                  <div class="electron"></div>
+                  <div class="electron"></div>
+                </div>
+              </div>
+              <div class="electron-shell electron-shell-2s">
+                <div class="electron-orbit">
+                  <div class="electron"></div>
+                  <div class="electron"></div>
+                </div>
+              </div>
+              <div class="electron-shell electron-shell-2p">
+                <div class="electron-orbit">
+                  <div class="electron"></div>
+                  <div class="electron"></div>
+                </div>
+                <div class="electron-orbit">
+                  <div class="electron"></div>
+                  <div class="electron"></div>
+                </div>
+              </div>
+
+<!-- 
+            <div class="electron-orbit">
+              <div class="electron"></div>
+            </div>
+            <div class="electron-orbit electron-orbit-second">
+              <div class="electron"></div>
+            </div> -->
+
+          </div>
+    <!-- <div class="ascii-container">
+        <pre>
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                    ▒▒▓▓                                                        
+                  ▓▓▒▒▒▒▓▓                                                      
+                  ▒▒▒▒▒▒▒▒▒▒                        ▓▓▓▓▓▓                      
+                    ▒▒▒▒    ▓▓▒▒                ▓▓▓▓      ▓▓                    
+                    ▓▓░░    ░░░░▒▒            ▒▒░░░░      ▓▓                    
+                    ▒▒          ░░▒▒        ▓▓            ▓▓                    
+                    ▒▒              ▓▓    ▓▓              ▓▓                    
+                      ▓▓              ▓▓▓▓              ▓▓                      
+                      ▒▒            ██▓▓▓▓▓▓            ▓▓                      
+                        ▓▓        ▓▓▓▓░░░░▓▓██        ▓▓                        
+                        ▒▒    ██████▓▓▓▓▓▓░░▓▓▓▓▓▓▓▓  ▓▓                        
+                  ▓▓▓▓▓▓▓▓▒▒▓▓░░▒▒████▓▓▓▓▓▓▓▓░░░░░░▒▒▓▓▓▓▓▓▓▓                  
+              ▓▓▓▓        ▒▒██████░░██▓▓▓▓████▓▓▓▓  ▓▓        ▓▓▓▓▒▒▓▓          
+          ░░▓▓            ██▓▓████████▓▓████░░  ██▓▓            ▓▓▓▓▓▓          
+          ▓▓              ██▓▓████████  ██████████▓▓            ▓▓▓▓▓▓          
+          ░░▓▓              ██▒▒████▓▓▓▓████████▓▓██              ▓▓▓▓          
+              ▓▓▓▓          ▓▓▓▓▒▒░░░░▓▓██████▓▓████▓▓        ▓▓▓▓              
+                  ▓▓▓▓▓▓▓▓▓▓  ▓▓▓▓▒▒▓▓░░▓▓██▓▓████  ▓▓▓▓▓▓▓▓▓▓                  
+                        ▓▓  ▓▓▓▓▓▓▓▓▒▒▓▓▓▓▓▓▓▓▓▓▓▓▓▓  ▒▒                        
+                        ▓▓    ▓▓▓▓▓▓▓▓▒▒▓▓            ▒▒                        
+                      ▓▓        ▓▓▓▓▓▓▓▓▒▒              ▒▒                      
+                      ▓▓            ▓▓    ▓▓            ▒▒                      
+                    ▓▓            ▓▓        ▒▒            ▒▒                    
+                    ▓▓          ▓▓            ▒▒          ▒▒                    
+                    ▓▓▒▒      ▒▒░░            ░░▒▒        ▒▒                    
+                  ▓▓▓▓▓▓▓▓▒▒▒▒                  ░░▒▒▒▒    ▓▓                    
+                  ▓▓▓▓▓▓▓▓                            ▒▒▒▒                      
+                  ▒▒                                  ▒▒▒▒                      
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                                                                  
+        </pre>
+    </div> -->
+      </section>      
+    <section id="projects">
+      <!-- Projects section showcasing your work -->
+    </section>
+    <section id="skills">
+        <h3>Technical Skills</h3>
+        <ul>
+          <li>Programming languages (Python, C++, Javascript)</li>
+          <li>Quantum frameworks (Strangeworks, Qiskit, OpenFermion)</li>
+          <li>Algorithms (QAOA, VQE, QUBO, Linear Programming)</li>
+        </ul>
+        <h3>Soft Skills</h3>
+        <ul>
+          <li>Problem-solving</li>
+          <li>Collaboration</li>
+          <li>Research</li>
+          <li>Communication</li>
+          <li>Analytical thinking</li>
+        </ul>
+    </section>
+    <section id="contact">
+      <!-- Contact information -->
+    </section>
+  </main>
+  <footer>
+    <!-- Footer with copyright information and social media links -->
+  </footer>
+  <script>
+    const themeCheckbox = document.getElementById('theme-checkbox');
+    const currentTheme = localStorage.getItem('theme') || 'dark-mode';
+  
+    document.body.classList.add(currentTheme);
+    themeCheckbox.checked = currentTheme === 'dark-mode';
+  
+    themeCheckbox.addEventListener('change', () => {
+      document.body.classList.toggle('dark-mode');
+      document.body.classList.toggle('light-mode');
+  
+      const newTheme = document.body.classList.contains('dark-mode') ? 'dark-mode' : 'light-mode';
+      localStorage.setItem('theme', newTheme);
+    });
+  </script>
+  
+</body>
 </html>
