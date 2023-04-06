@@ -56,25 +56,6 @@ footer {
   text-align: center;
   padding: 1rem 0;
 }
-
-/* this makes the ascii-container depicting an atom rotate, it's a little jank because in 2d
-the rotation is off-centre from the atomic frame of reference */
-.ascii-container {
-    display: inline-flex;
-    justify-content: center;
-    width: 100%;
-    transform: scale(0.5); /* Adjust the scale value to change the size */
-    animation: rotation 10s infinite linear; /* Adjust the duration and timing to change the animation */
-  }
-  
-  @keyframes rotation {
-    from {
-      transform: rotate(0deg) scale(0.5);
-    }
-    to {
-      transform: rotate(360deg) scale(0.5);
-    }
-  }
   
   /* Dark mode switch  */
 
