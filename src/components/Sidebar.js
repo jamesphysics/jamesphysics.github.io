@@ -1,15 +1,11 @@
 import React from 'react';
 import { Link } from 'react-scroll';
-import profileImage from '../assets/me.jpeg'; // Adjust the path as necessary
+import Profile from './Profile';
 
 const Sidebar = () => {
   return (
     <div className="sidebar">
-      <div className="profile-container">
-        <Link to="home" smooth={true} duration={500} spy={true} activeClass="active">
-          <img src={profileImage} alt="Profile" className="profile-image" />
-        </Link>
-      </div>
+      <Profile />
       <ul>
         <li><Link to="home" smooth={true} duration={500} spy={true} activeClass="active">About</Link></li>
         <li><Link to="experience" smooth={true} duration={500} spy={true} activeClass="active">Experience</Link></li>

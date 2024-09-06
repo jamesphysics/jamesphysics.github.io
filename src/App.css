@@ -26,6 +26,7 @@ html, body {
   flex-direction: column;
   justify-content: center; /* Center content vertically */
   text-align: center; /* Center text horizontally */
+  z-index: 2; /* Ensure the sidebar is above the content */
 }
 
 .sidebar ul {
@@ -220,6 +221,14 @@ html, body {
   margin: 5px 0; /* Add some space between list items */
   font-size: 0.9em;
   color: #666;
+  display: flex;
+  align-items: center;
+}
+
+.skill-logo {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
 }
 
 /* Honors & Awards Styling */
@@ -240,4 +249,72 @@ html, body {
   margin: 3px 0; /* Reduce the margin between items */
   font-size: 0.9em;
   color: #666;
+}
+
+/* Add this CSS at the end of your existing CSS file */
+
+/* Prevent horizontal scrolling */
+body {
+  overflow-x: hidden;
+}
+
+/* Overhang Card Styling */
+.overhang-card {
+  position: absolute; /* or fixed if you want it to stay in place even when scrolling vertically */
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  width: 300px;
+  height: 500px;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.overhang {
+  position: absolute;
+  top: 0;
+  left: -50px; /* Adjust this value to control the overhang */
+  width: 50px;
+  height: 100%;
+  background-color: #add8e6; /* Adjust the color as needed */
+}
+
+/* Media Queries for Mobile Optimization */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+    padding: 10px;
+  }
+
+  .content {
+    margin-left: 0;
+    width: 100%;
+    padding: 10px;
+  }
+
+  .overhang-card {
+    width: 100%;
+    height: auto;
+    position: relative;
+    transform: none;
+    top: 0;
+    left: 0;
+  }
+
+  .overhang {
+    display: none; /* Hide the overhang on mobile */
+  }
+
+  .section {
+    padding: 10px;
+    margin-bottom: 20px;
+  }
+
+  .home-content h1 {
+    font-size: 2em; /* Adjust font size for mobile */
+  }
 }
