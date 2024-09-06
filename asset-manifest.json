@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/jamesquantum.com/static/css/main.a7200514.css",
-    "main.js": "/jamesquantum.com/static/js/main.8563df87.js",
-    "static/media/me.jpeg": "/jamesquantum.com/static/media/me.ff7a485dd08e851b33bc.jpeg",
-    "index.html": "/jamesquantum.com/index.html",
-    "main.a7200514.css.map": "/jamesquantum.com/static/css/main.a7200514.css.map",
-    "main.8563df87.js.map": "/jamesquantum.com/static/js/main.8563df87.js.map"
+    "main.css": "/static/css/main.a7200514.css",
+    "main.js": "/static/js/main.5b480292.js",
+    "static/media/me.jpeg": "/static/media/me.ff7a485dd08e851b33bc.jpeg",
+    "index.html": "/index.html",
+    "main.a7200514.css.map": "/static/css/main.a7200514.css.map",
+    "main.5b480292.js.map": "/static/js/main.5b480292.js.map"
   },
   "entrypoints": [
     "static/css/main.a7200514.css",
-    "static/js/main.8563df87.js"
+    "static/js/main.5b480292.js"
   ]
 }
