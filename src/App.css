@@ -318,3 +318,68 @@ body {
     font-size: 2em; /* Adjust font size for mobile */
   }
 }
+
+.education-logo {
+  width: 50px; /* Set a fixed width */
+  height: auto; /* Let the height adjust automatically */
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+.levels {
+  margin-bottom: 20px;
+}
+
+.levels h4 {
+  margin: 0 0 10px 0;
+  font-size: 1.2em;
+  color: #333;
+}
+
+.levels-list {
+  list-style-type: none;
+  padding: 0;
+  columns: 2;
+  column-gap: 20px;
+}
+
+.levels-list li {
+  margin: 5px 0;
+  font-size: 0.9em;
+  color: #666;
+}
+
+.levels-list .grade {
+  margin-left: 5px;
+  font-weight: bold;
+}
+
+.education-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.education-header h3 {
+  font-size: 1.4em;
+}
+
+.education-header h4 {
+  font-size: 1.2em;
+}
+
+.education-header h5 {
+  font-size: 1em;
+}
+
+.education-header h6 {
+  font-size: 0.8em;
+}
+
+.duration {
+  font-style: italic;
+}
+
+.grade {
+  font-weight: bold;
+}
