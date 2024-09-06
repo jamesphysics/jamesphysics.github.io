@@ -1,0 +1,243 @@
+/* General Reset */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background-color: white; /* Ensure the main background is white */
+}
+
+/* General App Styling */
+.App {
+  display: flex;
+  font-family: 'Oswald', sans-serif; /* Apply Oswald font */
+}
+
+/* Sidebar Styling */
+.sidebar {
+  width: 200px;
+  background-color: #add8e6; /* Light blue color */
+  padding: 20px;
+  color: white;
+  position: fixed; /* Fix the sidebar position */
+  top: 0;
+  left: 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center content vertically */
+  text-align: center; /* Center text horizontally */
+}
+
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.sidebar ul li {
+  margin: 10px 0;
+}
+
+.sidebar ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  transition: color 0.3s;
+  text-transform: uppercase; /* Make text all caps */
+  font-weight: bold; /* Make text bold */
+}
+
+.sidebar ul li a:hover {
+  color: #61dafb;
+}
+
+/* Profile Image Styling */
+.profile-container {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.profile-image {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid white;
+  cursor: pointer; /* Make the image look clickable */
+}
+
+/* Content Styling */
+.content {
+  margin-left: 220px; /* Adjust for the fixed sidebar width */
+  padding: 20px;
+  width: calc(100% - 220px);
+  position: relative; /* Ensure content is positioned correctly */
+  top: 0; /* Align content to the top */
+}
+
+/* Section Styling */
+.section {
+  min-height: 100vh; /* Ensure each section takes up at least the full height of the viewport */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center content vertically */
+  align-items: flex-start; /* Align content to the left */
+  padding: 20px;
+  background-color: white;
+  border-radius: 8px;
+  margin-bottom: 50px;
+  /* Remove the box-shadow */
+  box-shadow: none;
+}
+
+.section h2 {
+  margin-top: 0;
+  color: #343a40;
+}
+
+.section p {
+  color: #6c757d;
+}
+
+/* Home Section Styling */
+.home-content {
+  text-align: left; /* Align text to the left */
+}
+
+.home-content h1 {
+  font-size: 4em; /* Increase font size */
+  margin: 0;
+}
+
+.home-content .name {
+  color: #343a40;
+}
+
+.home-content .surname {
+  color: #add8e6; /* Matching color */
+}
+
+.home-content .contact-info {
+  font-size: 1.2em;
+  color: #6c757d;
+  margin: 10px 0;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.home-content .email {
+  color: #add8e6;
+}
+
+.home-content .email a {
+  color: #add8e6;
+  text-decoration: none;
+  font-size: 1em; /* Changed to match the parent font size */
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.home-content .description {
+  font-size: 1.1em;
+  color: #6c757d;
+  margin: 20px 0;
+}
+
+.home-content .social-icons {
+  margin-top: 20px;
+}
+
+.home-content .social-icons a {
+  color: #343a40;
+  font-size: 1.5em;
+  margin: 0 10px;
+  transition: color 0.3s;
+}
+
+.home-content .social-icons a:hover {
+  color: #add8e6;
+}
+
+/* Footer Styling */
+.footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #343a40;
+  color: white;
+  width: 100%;
+}
+
+/* Experience Styling */
+.experience-item {
+  margin-bottom: 20px;
+  padding: 10px;
+}
+
+.experience-item h3 {
+  margin: 0;
+  font-size: 1.2em;
+  color: #333;
+}
+
+.experience-item .company,
+.experience-item .duration,
+.experience-item .location,
+.experience-item .skills,
+.experience-item .description,
+.experience-item .projects {
+  margin: 5px 0;
+  font-size: 0.9em;
+  color: #666;
+}
+
+.experience-item .skills {
+  font-style: italic;
+}
+
+.experience-item .projects {
+  font-weight: bold;
+}
+
+/* Skills Styling */
+.skills-item {
+  margin-bottom: 20px; /* Adjust the bottom margin */
+  padding: 10px;
+}
+
+.skills-item h3 {
+  margin: 0 0 10px 0; /* Add some space below the heading */
+  font-size: 1.2em;
+  color: #333;
+}
+
+.skills-item ul {
+  list-style-type: none; /* Remove default list styling */
+  padding: 0;
+  columns: 2; /* Display skills in two columns */
+  column-gap: 20px; /* Add some space between columns */
+}
+
+.skills-item ul li {
+  margin: 5px 0; /* Add some space between list items */
+  font-size: 0.9em;
+  color: #666;
+}
+
+/* Honors & Awards Styling */
+.honor-item {
+  margin-bottom: 20px; /* Adjust the bottom margin */
+  padding: 10px;
+}
+
+.honor-item h3 {
+  margin: 0;
+  font-size: 1.2em;
+  color: #333;
+}
+
+.honor-item .issuer,
+.honor-item .association,
+.honor-item .description {
+  margin: 3px 0; /* Reduce the margin between items */
+  font-size: 0.9em;
+  color: #666;
+}
