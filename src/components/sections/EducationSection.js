@@ -3,6 +3,7 @@ import Section from '../Section';
 import EducationItem from '../EducationItem';
 import oxfordLogo from '../../assets/logos/oxford.jpg';
 import bristolLogo from '../../assets/logos/bgs.png';
+import ougymLogo from '../../assets/logos/ougym.webp';
 
 const EducationSection = () => {
   return (
@@ -16,7 +17,17 @@ const EducationSection = () => {
           "Quantum Information Processing"
         ]}
         thesis="Anyons and Topological Quantum Computing"
-        activities="Oxford University Gymnastics Club (Men's A Team 16-17, Treasurer 16-17, IT Officer 15-16)"
+        activities={[
+          { 
+            name: "Oxford University Gymnastics Club", 
+            logo: ougymLogo,
+            details: [
+              "Men's A Team 16-17",
+              <a href="https://ougym.org/alumni/" target="_blank" rel="noopener noreferrer">Treasurer 16-17</a>,
+              <a href="https://ougym.org/alumni/" target="_blank" rel="noopener noreferrer">IT Officer 15-16</a>
+            ] 
+          }
+        ]}
         logo={oxfordLogo}
       />
       <EducationItem

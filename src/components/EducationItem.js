@@ -6,7 +6,7 @@ const EducationItem = ({ institution, title, duration, grade, majors, thesis, ac
       <div className="education-header">
         <div>
           <h3>{institution}</h3>
-        <img src={logo} alt={`${institution} logo`} className="education-logo" />
+          <img src={logo} alt={`${institution} logo`} className="education-logo" />
           <p className="duration"><em>{duration}</em></p>
           <p className="title">{title}</p>
         </div>
@@ -28,10 +28,22 @@ const EducationItem = ({ institution, title, duration, grade, majors, thesis, ac
           <p>{thesis}</p>
         </div>
       )}
-      {activities && (
+      {activities && activities.length > 0 && (
         <div className="levels">
           <h4>Activities</h4>
-          <p>{activities}</p>
+          {activities.map((activity, index) => (
+            <div key={index} className="activity-item">
+              {activity.logo && <img src={activity.logo} alt={`${activity.name} logo`} className="activity-logo" />}
+              <h5>{activity.name}</h5>
+              <div className="activity-content">
+                <ul>
+                  {activity.details.map((detail, detailIndex) => (
+                    <li key={detailIndex}>{detail}</li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          ))}
         </div>
       )}
       {aLevels && (
