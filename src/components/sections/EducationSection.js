@@ -3,7 +3,7 @@ import Section from '../Section';
 import EducationItem from '../EducationItem';
 import oxfordLogo from '../../assets/logos/oxford.jpg';
 import bristolLogo from '../../assets/logos/bgs.png';
-import ougymLogo from '../../assets/logos/ougym.webp';
+// import ougymLogo from '../../assets/logos/ougym.webp';
 
 const EducationSection = () => {
   return (
