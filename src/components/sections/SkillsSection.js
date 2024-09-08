@@ -46,22 +46,26 @@ const SkillsSection = () => {
       <SkillsList
         title="Software Development"
         skills={[
-            "Documentation",
-            "Quality Assurance",
-            "Product Onboarding",
-            "Developer Relations"
+            "🔄 Project Management",
+            "📝 Software Documentation",
+            "👤 User Experience (UX)",
+            "💻 User Interface (UI)",
+            "✅ Quality Assurance (QA)",
+            "🎨 Product Design",
+            "🚀 Product Onboarding",
+            "👥 Developer Relations",
         ]}
-        skillLogos={{}} // No logos for soft skills
+        skillLogos={{}}
       />
         <SkillsList
         title="Scientific Research"
         skills={[
-            "Quantum Information Processing",
-            "Mathematical Optimization",
-            "Computational Chemistry",
-            "Simulation",
+            "⚛️ Quantum Computing",
+            "🧮 Mathematical Optimization",
+            "🧪 Computational Chemistry",
+            "🧬 Simulation",
         ]}
-        skillLogos={{}} // No logos for soft skills
+        skillLogos={{}}
       />
     </Section>
   );

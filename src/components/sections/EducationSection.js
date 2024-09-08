@@ -17,17 +17,17 @@ const EducationSection = () => {
           "Quantum Information Processing"
         ]}
         thesis="Anyons and Topological Quantum Computing"
-        activities={[
-          { 
-            name: "Oxford University Gymnastics Club", 
-            logo: ougymLogo,
-            details: [
-              "Men's A Team 16-17",
-              <a href="https://ougym.org/alumni/" target="_blank" rel="noopener noreferrer">Treasurer 16-17</a>,
-              <a href="https://ougym.org/alumni/" target="_blank" rel="noopener noreferrer">IT Officer 15-16</a>
-            ] 
-          }
-        ]}
+        // activities={[
+        //   { 
+        //     name: "Oxford University Gymnastics Club", 
+        //     // logo: ougymLogo,
+        //     details: [
+        //       "Men's A Team 16-17",
+        //       <a href="https://ougym.org/alumni/" target="_blank" rel="noopener noreferrer">Treasurer 16-17</a>,
+        //       <a href="https://ougym.org/alumni/" target="_blank" rel="noopener noreferrer">IT Officer 15-16</a>
+        //     ] 
+        //   }
+        // ]}
         logo={oxfordLogo}
       />
       <EducationItem

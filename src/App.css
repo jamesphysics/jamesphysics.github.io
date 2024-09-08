@@ -321,7 +321,7 @@ body {
 }
 
 .education-logo {
-  width: 50px; /* Set a fixed width */
+  width: 75px; /* Set a fixed width */
   height: auto; /* Let the height adjust automatically */
   margin-right: 10px;
   vertical-align: middle;
@@ -332,7 +332,7 @@ body {
 }
 
 .levels h4 {
-  font-size: 1.5em; /* Third largest font size for subheadings like Master of Physics, Thesis, Activities, etc. */
+  font-size: 1.2em; /* Third largest font size for subheadings like Master of Physics, Thesis, Activities, etc. */
   margin: 0 0 10px 0;
   color: #333;
 }
@@ -358,23 +358,33 @@ body {
 .education-header {
   display: flex;
   align-items: center;
-  margin-bottom: 10px;
+  margin-bottom: 5px; /* Reduce the bottom margin */
 }
 
 .education-header h3 {
-  font-size: 2em; /* Second largest font size for institution name */
+  font-size: 1.5em; /* Second largest font size for institution name */
+  margin: 0 0 5px 0; /* Reduce the bottom margin */
 }
 
 .education-header h4 {
   font-size: 1.2em;
 }
+.education-header .duration {
+  margin: 0; /* Remove any margin */
+}
 
 .education-header h5 {
   font-size: 1em;
 }
+.education-header .title {
+  margin: 0; /* Remove any margin */
+}
 
 .education-header h6 {
   font-size: 0.8em;
+}
+.education-item .grade {
+  margin-top: 5px; /* Reduce the top margin */
 }
 
 .duration {
@@ -402,4 +412,45 @@ body {
   height: auto;
   margin-bottom: 10px;
   vertical-align: middle;
+}
+
+.experience-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.company-logo {
+  height: 50px; /* Set a fixed height */
+  width: auto; /* Maintain aspect ratio */
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+.job-title {
+  display: inline-block;
+  margin: 0; /* Remove default margin */
+}
+
+.activity-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.activity-logo {
+  width: 50px;
+  height: auto;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+a:visited {
+  color: inherit; /* This will make the visited link color the same as the unvisited link color */
+}
+
+.badge {
+  width: 150px; /* Adjust the width as needed */
+  height: auto; /* Maintain aspect ratio */
+  margin-top: 10px; /* Add some space above the badge */
 }

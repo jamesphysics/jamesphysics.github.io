@@ -4,14 +4,14 @@ const EducationItem = ({ institution, title, duration, grade, majors, thesis, ac
   return (
     <div className="education-item">
       <div className="education-header">
+        {logo && <img src={logo} alt={`${institution} logo`} className="education-logo" />}
         <div>
           <h3>{institution}</h3>
-          <img src={logo} alt={`${institution} logo`} className="education-logo" />
           <p className="duration"><em>{duration}</em></p>
           <p className="title">{title}</p>
+      {grade && <p className="grade">{grade}</p>}
         </div>
       </div>
-      {grade && <p className="grade">{grade}</p>}
       {majors && (
         <div className="levels">
           <h4>Master of Physics (MPhys)</h4>
@@ -33,8 +33,10 @@ const EducationItem = ({ institution, title, duration, grade, majors, thesis, ac
           <h4>Activities</h4>
           {activities.map((activity, index) => (
             <div key={index} className="activity-item">
-              {activity.logo && <img src={activity.logo} alt={`${activity.name} logo`} className="activity-logo" />}
-              <h5>{activity.name}</h5>
+              <div className="activity-header">
+                {activity.logo && <img src={activity.logo} alt={`${activity.name} logo`} className="activity-logo" />}
+                <h5>{activity.name}</h5>
+              </div>
               <div className="activity-content">
                 <ul>
                   {activity.details.map((detail, detailIndex) => (
