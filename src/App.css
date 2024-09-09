@@ -454,3 +454,22 @@ a:visited {
   height: auto; /* Maintain aspect ratio */
   margin-top: 10px; /* Add some space above the badge */
 }
+
+.carousel-iframe {
+  width: 100%;
+  /* height: auto; */
+  max-width: 560px;
+  max-height: 315px;
+}
+
+.carousel-image-landscape {
+  width: 100%;
+  max-width: 560px;
+  height: auto;
+}
+
+.carousel-image-portrait {
+  width: 100%;
+  max-width: 315px; 
+  height: auto;
+}
