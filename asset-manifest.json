@@ -1,7 +1,10 @@
 {
   "files": {
-    "main.css": "/static/css/main.a17644c7.css",
-    "main.js": "/static/js/main.9bf31fc5.js",
+    "main.css": "/static/css/main.dc5cf085.css",
+    "main.js": "/static/js/main.1edf26a3.js",
+    "static/media/swim.JPG": "/static/media/swim.e6c4a4bc3bdd84ba6a27.JPG",
+    "static/media/cycle.JPG": "/static/media/cycle.c50fd9dfc6d9fbe07431.JPG",
+    "static/media/run.JPG": "/static/media/run.e5e85cee8f87c9a33e33.JPG",
     "static/media/python.png": "/static/media/python.397eefce24a7451dd71c.png",
     "static/media/matlab.png": "/static/media/matlab.00dbf274028894e4489a.png",
     "static/media/qiskit-dev.png": "/static/media/qiskit-dev.7b7d08b0fca170db0b8e.png",
@@ -12,11 +15,11 @@
     "static/media/accenture.png": "/static/media/accenture.be56100c4c1edcc8e0be.png",
     "static/media/me.jpeg": "/static/media/me.ff7a485dd08e851b33bc.jpeg",
     "index.html": "/index.html",
-    "main.a17644c7.css.map": "/static/css/main.a17644c7.css.map",
-    "main.9bf31fc5.js.map": "/static/js/main.9bf31fc5.js.map"
+    "main.dc5cf085.css.map": "/static/css/main.dc5cf085.css.map",
+    "main.1edf26a3.js.map": "/static/js/main.1edf26a3.js.map"
   },
   "entrypoints": [
-    "static/css/main.a17644c7.css",
-    "static/js/main.9bf31fc5.js"
+    "static/css/main.dc5cf085.css",
+    "static/js/main.1edf26a3.js"
   ]
 }
