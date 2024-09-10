@@ -14,8 +14,8 @@ html, body {
 
 /* Sidebar Styling */
 .sidebar {
-  width: 200px;
-  background-color: #add8e6; /* Light blue color */
+  width: 200px; /* Fixed width for larger screens */
+  background-color: #1a3d5d; /* Darker blue color for better contrast */
   padding: 20px;
   color: white;
   position: fixed; /* Fix the sidebar position */
@@ -39,7 +39,7 @@ html, body {
 }
 
 .sidebar ul li a {
-  color: white;
+  color: white; /* Ensure the text color is white */
   text-decoration: none;
   font-size: 18px;
   transition: color 0.3s;
@@ -103,6 +103,7 @@ html, body {
 /* Home Section Styling */
 .home-content {
   text-align: left; /* Align text to the left */
+  max-width: 50%; /* Limit the width to 50% for better line breaks */
 }
 
 .home-content h1 {
@@ -252,62 +253,22 @@ html, body {
   color: #666;
 }
 
-/* Add this CSS at the end of your existing CSS file */
-
 /* Prevent horizontal scrolling */
 body {
   overflow-x: hidden;
 }
 
-/* Overhang Card Styling */
-.overhang-card {
-  position: absolute; /* or fixed if you want it to stay in place even when scrolling vertically */
-  top: 50%;
-  left: 0;
-  transform: translateY(-50%);
-  width: 300px;
-  height: 500px;
-  background-color: white;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  border-radius: 8px;
-  overflow: hidden;
-}
-
-.overhang {
-  position: absolute;
-  top: 0;
-  left: -50px; /* Adjust this value to control the overhang */
-  width: 50px;
-  height: 100%;
-  background-color: #add8e6; /* Adjust the color as needed */
-}
-
 /* Media Queries for Mobile Optimization */
 @media (max-width: 768px) {
   .sidebar {
-    width: 100%;
-    height: auto;
-    position: relative;
+    width: 150px; /* Adjust width for smaller screens */
     padding: 10px;
   }
 
   .content {
-    margin-left: 0;
-    width: 100%;
+    margin-left: 170px; /* Adjust for the fixed sidebar width on smaller screens */
+    width: calc(100% - 170px);
     padding: 10px;
-  }
-
-  .overhang-card {
-    width: 100%;
-    height: auto;
-    position: relative;
-    transform: none;
-    top: 0;
-    left: 0;
-  }
-
-  .overhang {
-    display: none; /* Hide the overhang on mobile */
   }
 
   .section {
