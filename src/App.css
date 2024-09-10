@@ -48,7 +48,7 @@ html, body {
 }
 
 .sidebar ul li a:hover {
-  color: #61dafb;
+  color: #add8e6;
 }
 
 /* Profile Image Styling */
@@ -274,6 +274,10 @@ body {
   .section {
     padding: 10px;
     margin-bottom: 20px;
+  }
+
+  .home-content {
+    max-width: 100%; /* Remove max-width for mobile */
   }
 
   .home-content h1 {
