@@ -116,7 +116,7 @@ html, body {
 }
 
 .home-content .surname {
-  color: #add8e6; /* Matching color */
+  color: #343a40; /* Matching color */
 }
 
 .home-content .contact-info {
@@ -266,8 +266,8 @@ body {
   }
 
   .content {
-    margin-left: 170px; /* Adjust for the fixed sidebar width on smaller screens */
-    width: calc(100% - 170px);
+    margin-left: 110px; /* Adjust for the fixed sidebar width on smaller screens */
+    width: calc(100% - 110px);
     padding: 10px;
   }
 
